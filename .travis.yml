@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t julian1603/node .
   - docker images julian1603/node
+
+before_deploy:
+  -docker login -u julian1603 -p 1001016190Julian*
+
+deploy:
+  provider: script
+  script: docker push julian1603/node
+  on: 
+    branch: master
