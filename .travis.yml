@@ -7,7 +7,7 @@ script:
   - docker images julian1603/node
 
 before_deploy:
-  -docker login -u julian1603 -p 1001016190Julian*
+  - docker login -u julian1603 -p 1001016190Julian*
 
 deploy:
   provider: script
