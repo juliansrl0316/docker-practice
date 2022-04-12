@@ -1,0 +1,7 @@
+sudo: required
+services: 
+  - docker
+
+script:
+  - docker build -t julian1603/node .
+  - docker images julian1603/node
